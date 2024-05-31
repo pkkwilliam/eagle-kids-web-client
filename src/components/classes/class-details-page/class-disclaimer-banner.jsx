@@ -34,7 +34,10 @@ const ClassDisclaimerBanner = () => {
                   <div className="accordion" id="accordionExample">
                     {labels.disclaimers.map((disclaimer, index) => {
                       return (
-                        <div className="accordion-item">
+                        <div
+                          className="accordion-item"
+                          key={"disclaimer" + index}
+                        >
                           <h2
                             className="accordion-header"
                             id={`heading${index}`}
@@ -66,6 +69,7 @@ const ClassDisclaimerBanner = () => {
                                   (content, contentIndex) => {
                                     return (
                                       <p
+                                        key={"disclaimerContent" + contentIndex}
                                         style={{
                                           display: "list-item",
                                           marginLeft: "1em",
