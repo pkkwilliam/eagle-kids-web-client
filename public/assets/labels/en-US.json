@@ -4,7 +4,7 @@
   "emailUrl": "mailto:admin@eaglekid.org",
   "phoneNumber": "236-234-8383",
   "phoneNumberUrl": "tel:+12362348383",
-  "schoolName": "Little Eagle Academy",
+  "schoolName": "Eagle Kid Academy",
   "component": {
     "cartMain": {
       "cartEmpty": "Your cart is empty",
@@ -53,7 +53,7 @@
         {
           "title": "Class Policy",
           "contents": [
-            "Make-up classes will be offered at Little Eagle Academy location only. Due to very limited scheduling, we are not able to guarantee a make-up class. We will do our best to schedule a make-up class based on availability and a make-up class must also be scheduled before the end of the current session.",
+            "Make-up classes will be offered at Eagle Kid Academy location only. Due to very limited scheduling, we are not able to guarantee a make-up class. We will do our best to schedule a make-up class based on availability and a make-up class must also be scheduled before the end of the current session.",
             "Any sibling older than 6 months old must sign up for a spot to attend the class. Babies under 6 months old may attend the class for free with a registered sibling.",
             "If you are registering more than one child for the same session, please email admin@eaglekid.org to request a 10% sibling discount code."
           ]
@@ -61,7 +61,7 @@
         {
           "title": "Photography and Videography",
           "contents": [
-            "Your child’s class experience will create many great photo opportunities that we would like your permission to capture and use. By registering, I consent to the use and disclosure of the image, name, and the taking of photographs, recordings, and videos of my child by Little Eagle Academy. I grant Little Eagle Academy the right to disclose, edit, use, and reuse my child's image, name, and the taking of photographs, recordings, and videos.This includes use in print, on broadcasts, in online spaces (such website and social media accounts and those of the press), and all other forms of media. I also release Little Eagle Academy, its agents, and employees from all claims, demands, and liabilities in connection with the rights granted above.",
+            "Your child’s class experience will create many great photo opportunities that we would like your permission to capture and use. By registering, I consent to the use and disclosure of the image, name, and the taking of photographs, recordings, and videos of my child by Eagle Kid Academy. I grant Eagle Kid Academy the right to disclose, edit, use, and reuse my child's image, name, and the taking of photographs, recordings, and videos.This includes use in print, on broadcasts, in online spaces (such website and social media accounts and those of the press), and all other forms of media. I also release Eagle Kid Academy, its agents, and employees from all claims, demands, and liabilities in connection with the rights granted above.",
             "If you wish to opt out of your child’s inclusion in photographs and other media, please contact our team."
           ]
         },
@@ -110,7 +110,7 @@
       "title": "Contact Us Right Here"
     },
     "footer": {
-      "teaser": "Little Eagle Academy",
+      "teaser": "Eagle Kid Academy",
       "socialTitle": "Social",
       "newsTitle": "Join Our Newsletter",
       "newsBtn": "Subscribe now",
@@ -134,8 +134,8 @@
       "social_icons": []
     },
     "hamburgerMenu": {
-      "aboutOurSchoolTitle": "About Little Eagle Academy",
-      "aboutSummary": "There's nothing more fulfilling than seeing young minds flourish and evolve into future leaders. At Little Eagle Academy, we foster an environment where every child feels valued and empowered to reach their full potential.",
+      "aboutOurSchoolTitle": "About Eagle Kid Academy",
+      "aboutSummary": "There's nothing more fulfilling than seeing young minds flourish and evolve into future leaders. At Eagle Kid Academy, we foster an environment where every child feels valued and empowered to reach their full potential.",
       "contactInfo": "Contact Info"
     },
     "menu": {
@@ -232,7 +232,7 @@
     },
     "banner": {
       "title": "Join Our New Session",
-      "description": "Little Eagle Academy believes that good questions drive good answers.<br />Whether it's a query about the world around us or a challenge.",
+      "description": "Eagle Kid Academy believes that good questions drive good answers.<br />Whether it's a query about the world around us or a challenge.",
       "applyNowButton": "Apply Now"
     },
     "teacher": {

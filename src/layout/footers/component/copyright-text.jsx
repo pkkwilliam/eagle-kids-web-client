@@ -23,7 +23,7 @@ const CopyrightText = ({ copyright_space, copyright_shape }) => {
               <p>
                 Copyrighted by &copy;{new Date().getFullYear()}{" "}
                 <a href="https://littleeagleacademy.com" rel="nofollow">
-                  Little Eagle Academy
+                  Eagle Kid Academy
                 </a>
               </p>
             </div>
