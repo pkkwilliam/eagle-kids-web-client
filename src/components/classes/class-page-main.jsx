@@ -11,7 +11,7 @@ import { TRIAL_TYPE_FREE } from "src/enum/TrialType";
 import SmallPrimaryButton from "@components/common/SmallPrimaryButton";
 import { getServerLocalizedLabel } from "@utils/localized-util";
 
-const ClassPageMain = () => {
+const ClassPageMain = ({ trialPage = false }) => {
   const { languageLabel, selectedLanguage } = useSelector(
     (state) => state.language
   );
@@ -22,7 +22,7 @@ const ClassPageMain = () => {
 
   const fetchClasses = async () => {
     const classes = await getClasses(store);
-    setClasses(classes);
+    setClasses(classes.filter((clazz) => !trialPage || clazz.trialAvailable));
   };
   useEffect(() => {
     fetchClasses();
