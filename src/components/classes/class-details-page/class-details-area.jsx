@@ -16,6 +16,7 @@ import ClassTrialBanner from "./class-trial-banner";
 import PrimaryButton from "@components/common/primary-button";
 import { getServerLocalizedLabel } from "@utils/localized-util";
 import { toDisplayMonthDate } from "@utils/time-util";
+import ClassTrialRowButton from "./class-trial-row-button";
 
 const ClassDetailsArea = ({ item }) => {
   const { languageLabel, selectedLanguage } = useSelector(
@@ -31,12 +32,23 @@ const ClassDetailsArea = ({ item }) => {
   const localizedInstructor = instructor?.localized?.[selectedLanguage] ?? {};
   return (
     <>
-      <Breadcrumb
+      {/* <Breadcrumb
         title={languageLabel?.page?.classDetail ?? "Class Details"}
         subTitle={languageLabel?.page?.classDetail ?? "Class Details"}
-      />
-      <section className="bd-class-details-widget pt-120 pb-70">
+      /> */}
+      <section className="bd-class-details-widget pb-70">
         <div className="container">
+          <div className="pb-20">
+            {clazz.trialAvailable && (
+              <ClassRegistrationModal
+                clazz={clazz}
+                clazzLocalization={clazzLocalization}
+                enrollType={ENROLL_TYPE_TRIAL}
+              >
+                <ClassTrialRowButton>{labels.trial}</ClassTrialRowButton>
+              </ClassRegistrationModal>
+            )}
+          </div>
           <div className="row">
             <div className="col-xl-6 col-lg-12 mb-50">
               <div
