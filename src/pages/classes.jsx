@@ -16,7 +16,7 @@ export default function Classes() {
     <Wrapper>
       <SEO pageTitle={"Classes"} />
       <HeaderFour />
-      <Breadcrumb title={labels.classes} subTitle={labels.classes} />
+      {/* <Breadcrumb title={labels.classes} subTitle={labels.classes} /> */}
       <ClassPageMain />
       {/* <AboutTestimonial /> */}
       {/* <ProgramPromotion /> */}

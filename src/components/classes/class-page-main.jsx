@@ -29,7 +29,7 @@ const ClassPageMain = ({ trialPage = false }) => {
   }, []);
 
   return (
-    <section className="bd-class-area pt-110 pb-70">
+    <section className="bd-class-area pt-30 pb-70">
       <div className="container">
         <div className="row">
           {classes.map((item) => {

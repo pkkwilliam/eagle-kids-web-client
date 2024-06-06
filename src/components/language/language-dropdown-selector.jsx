@@ -36,7 +36,11 @@ const LanguageDropdownSelector = () => {
           />
         </button>
 
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <ul
+          class="dropdown-menu"
+          aria-labelledby="dropdownMenuButton1"
+          style={{ zIndex: 999 }}
+        >
           {LanguageOptions}
         </ul>
       </div>

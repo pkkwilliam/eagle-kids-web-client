@@ -17,8 +17,11 @@ import PrimaryButton from "@components/common/primary-button";
 import { getServerLocalizedLabel } from "@utils/localized-util";
 import { toDisplayMonthDate } from "@utils/time-util";
 import ClassTrialRowButton from "./class-trial-row-button";
+import useSticky from "@hooks/use-sticky";
 
 const ClassDetailsArea = ({ item }) => {
+  const { sticky } = useSticky();
+
   const { languageLabel, selectedLanguage } = useSelector(
     (state) => state.language
   );
@@ -38,7 +41,16 @@ const ClassDetailsArea = ({ item }) => {
       /> */}
       <section className="bd-class-details-widget pb-70">
         <div className="container">
-          <div className="pb-20">
+          <div
+            style={{
+              position: "fixed",
+              right: 15,
+              margin: "auto",
+              top: 130,
+              width: "100%",
+              zIndex: 500,
+            }}
+          >
             {clazz.trialAvailable && (
               <ClassRegistrationModal
                 clazz={clazz}
@@ -234,7 +246,7 @@ const ClassDetailsArea = ({ item }) => {
                             </button>
                           </Link>
                         )}
-                        {clazz.trialAvailable && (
+                        {/* {clazz.trialAvailable && (
                           <ClassRegistrationModal
                             clazz={clazz}
                             clazzLocalization={clazzLocalization}
@@ -242,7 +254,7 @@ const ClassDetailsArea = ({ item }) => {
                           >
                             <Button variant="link">{labels.trial}</Button>
                           </ClassRegistrationModal>
-                        )}
+                        )} */}
                       </div>
                     </div>
                   </div>
