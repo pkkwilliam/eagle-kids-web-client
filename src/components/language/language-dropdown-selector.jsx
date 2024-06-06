@@ -10,7 +10,7 @@ const LanguageDropdownSelector = () => {
   const LanguageOptions = LANGUAGES.sort((l1, l2) => l2.weight - l1.weight).map(
     (language) => {
       return (
-        <li key={language.code}>
+        <li key={language.code} style={{ zIndex: 999 }}>
           <a
             class="dropdown-item"
             onClick={() => dispatch(selectLanguage(language.code))}
