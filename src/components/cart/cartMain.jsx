@@ -56,9 +56,9 @@ const CartMain = () => {
                   <table className="table">
                     <thead>
                       <tr>
-                        <th className="product-thumbnail">
+                        {/* <th className="product-thumbnail">
                           {labels.tableColumnImage}
-                        </th>
+                        </th> */}
                         <th className="cart-product-name">
                           {labels.tableColumnProduct}
                         </th>
@@ -75,7 +75,7 @@ const CartMain = () => {
                     <tbody>
                       {cartProducts.map((item, index) => (
                         <tr key={index}>
-                          <td className="product-thumbnail">
+                          {/* <td className="product-thumbnail">
                             <Image
                               src={item?.productImg}
                               style={{
@@ -85,7 +85,7 @@ const CartMain = () => {
                               }}
                               alt="img not found"
                             />
-                          </td>
+                          </td> */}
                           <td className="product-name">
                             <div
                               style={{
@@ -212,6 +212,7 @@ const CartMain = () => {
                 </ul>
               </div>
               <div
+                className="pt-50"
                 style={{
                   alignItems: "end",
                   display: "flex",

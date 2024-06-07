@@ -15,7 +15,7 @@
       "tableColumnProduct": "Product",
       "tableColumnPrice": "Price",
       "tableColumnRemove": "Remove",
-      "trialDisclaimer": "All trial classes are free. A reservation deposit of $5 will be returned at the end of the class.",
+      "trialDisclaimer": "",
       "total": "Total"
     },
     "cartSideBar": {
@@ -88,7 +88,7 @@
       "scheduledDate": "Scheduled Date",
       "session": "Session",
       "trial": "Trial",
-      "trialDisclaimer": "All trial classes are free. A reservation deposit of $5 will be returned at the end of the class."
+      "trialDisclaimer": ""
     },
     "classTrialBanner": {
       "title": "Join Our Trial Session",

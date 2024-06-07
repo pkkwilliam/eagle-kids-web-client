@@ -75,7 +75,7 @@ const ClassRegistrationModal = ({
       id: Math.random(),
       title: removeLineBreakTag(clazzLocalization.name),
       subTitles,
-      price: isTrial ? 5 : clazz.price,
+      price: isTrial ? 0 : clazz.price,
       productImg: {
         src: clazz.imageUrls[0],
         height: 832,
