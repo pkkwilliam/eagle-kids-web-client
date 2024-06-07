@@ -79,6 +79,7 @@
     },
     "classRegistrationModal": {
       "addToCart": "Add to Cart",
+      "checkout": "Checkout",
       "formFirstName": "Student's First Name",
       "formLastName": "Student's Last Name",
       "formDateOfBirth": "Student's Date of Birth (MM/DD/YYYY)",

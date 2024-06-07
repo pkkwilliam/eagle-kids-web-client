@@ -79,6 +79,7 @@
     },
     "classRegistrationModal": {
       "addToCart": "加入購物車",
+      "checkout": "結帳",
       "formFirstName": "學生的名字",
       "formLastName": "學生的姓氏",
       "formDateOfBirth": "學生的出生日期 (MM/DD/YYYY)",

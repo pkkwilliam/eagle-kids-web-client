@@ -1,6 +1,7 @@
 import { removeLineBreakTag } from "@utils/utils";
+import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, ButtonGroup, Form, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { ENROLL_TYPE_STANDARD, ENROLL_TYPE_TRIAL } from "src/enum/enrollType";
 import { cart_product } from "src/redux/features/cart-slice";
@@ -19,6 +20,7 @@ const ClassRegistrationModal = ({
   enrollType,
 }) => {
   const { languageLabel } = useSelector((state) => state.language);
+  const router = useRouter();
   const formRef = useRef(null);
   const [formData, setFormData] = useState(EMPTY_FORM_DATA);
   const [show, setShow] = useState(false);
@@ -64,7 +66,7 @@ const ClassRegistrationModal = ({
     });
   };
 
-  const handleOnClickAddToCart = () => {
+  const onClickAddToCart = () => {
     const courseName = selectedCourse.name;
     const subTitles = [
       `${isTrial ? "(Trial)  " : ""}${courseName}`,
@@ -89,6 +91,11 @@ const ClassRegistrationModal = ({
     dispatch(cart_product(cartItem));
     setFormData(EMPTY_FORM_DATA);
     setShow(false);
+  };
+
+  const onClickCheckout = () => {
+    onClickAddToCart();
+    router.push("/cart");
   };
 
   const hanldClose = () => {
@@ -208,15 +215,27 @@ const ClassRegistrationModal = ({
                   </Form.Text>
                 </Form.Group>
                 {isTrial && <h6>{labels.trialDisclaimer}</h6>}
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <ButtonGroup
+                  aria-label="Basic example"
+                  style={{ display: "flex", width: "100%" }}
+                >
                   <Button
                     disabled={!isValidForm}
-                    variant="primary"
-                    onClick={handleOnClickAddToCart}
+                    onClick={onClickAddToCart}
+                    style={{ flex: 1 }}
+                    variant="outline-primary"
                   >
                     {labels.addToCart}
                   </Button>
-                </div>
+                  <Button
+                    disabled={!isValidForm}
+                    onClick={onClickCheckout}
+                    style={{ flex: 1 }}
+                    variant="primary"
+                  >
+                    {labels.checkout}
+                  </Button>
+                </ButtonGroup>
               </Form>
             </div>
           </div>

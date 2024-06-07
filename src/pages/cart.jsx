@@ -6,16 +6,15 @@ import Breadcrumb from "@components/common/breadcrumb/breadcrumb";
 import CartMain from "@components/cart/cartMain";
 import HeaderFour from "@layout/headers/headerFour";
 
-
 export default function Cart() {
   return (
     <Wrapper>
-      <SEO pageTitle={'Cart'} />
+      <SEO pageTitle={"Cart"} />
       <HeaderFour />
       <Breadcrumb title="Cart" subTitle="Cart" />
       <CartMain />
       <HomeNewsletter />
-      <Footer/>
+      <Footer />
     </Wrapper>
-  )
+  );
 }
