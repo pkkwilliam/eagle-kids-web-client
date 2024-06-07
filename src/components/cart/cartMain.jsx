@@ -48,7 +48,7 @@ const CartMain = () => {
         </div>
       )}
       {cartProducts.length >= 1 && (
-        <div className="cart-area pt-100 pb-100">
+        <div className="cart-area pt-15 pb-15">
           <Container>
             <div className="row wow fadeInUp" data-wow-delay=".3s">
               <div className="col-12">

@@ -37,7 +37,7 @@ const Breadcrumb = ({ title, subTitle }) => {
             <div className="col-xl-10">
               <div className="bd-breadcrumb d-flex align-items-center justify-content-center">
                 <div className="bd-breadcrumb-content text-center">
-                  <h1 className="bd-breadcrumb-title">{title}</h1>
+                  {/* <h1 className="bd-breadcrumb-title">{title}</h1> */}
                   <div className="bd-breadcrumb-list">
                     <span>
                       <Link href="/">
