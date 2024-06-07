@@ -21,7 +21,10 @@ export const cartSlice = createSlice({
       } else {
         const tempProduct = { ...payload, quantity: 1 };
         state.cartProducts.push(tempProduct);
-        toast.success(`${payload.title} added \nto cart`, {
+        // toast.success(`${payload.title} added \nto cart`, {
+        //   position: "top-left",
+        // });
+        toast.success(`added to cart`, {
           position: "top-left",
         });
       }

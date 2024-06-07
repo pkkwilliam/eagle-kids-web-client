@@ -10,8 +10,10 @@ import author_1 from "@assets/img/teacher/small-1.png";
 import { TRIAL_TYPE_FREE } from "src/enum/TrialType";
 import SmallPrimaryButton from "@components/common/SmallPrimaryButton";
 import { getServerLocalizedLabel } from "@utils/localized-util";
+import { useRouter } from "next/router";
 
 const ClassPageMain = ({ trialPage = false }) => {
+  const router = useRouter();
   const { languageLabel, selectedLanguage } = useSelector(
     (state) => state.language
   );
@@ -100,7 +102,13 @@ const ClassPageMain = ({ trialPage = false }) => {
                           {enumLabels.priceUnit[item.priceUnit]}
                         </div>
                         {item.trialAvailable && (
-                          <TrialButton clazz={item} labels={labels} />
+                          <SmallPrimaryButton
+                            onClick={() =>
+                              router.push(`/class-details/${item.codeName}`)
+                            }
+                          >
+                            {labels.trialAvailable}
+                          </SmallPrimaryButton>
                         )}
                       </div>
                     </div>
@@ -118,10 +126,6 @@ const ClassPageMain = ({ trialPage = false }) => {
       </div>
     </section>
   );
-};
-
-const TrialButton = ({ clazz, labels }) => {
-  return <SmallPrimaryButton>{labels.trialAvailable}</SmallPrimaryButton>;
 };
 
 export default ClassPageMain;

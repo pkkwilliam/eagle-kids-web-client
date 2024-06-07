@@ -53,7 +53,7 @@ const ClassRegistrationModal = ({
       ...formData,
       courseId: toShowCourses[0].id,
     });
-  }, [clazz, enrollType]);
+  }, [clazz, enrollType, show]);
   if (!clazz || !clazz.courses) {
     return;
   }
