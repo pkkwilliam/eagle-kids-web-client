@@ -49,7 +49,7 @@ const CartMain = () => {
       )}
       {cartProducts.length >= 1 && (
         <div className="cart-area pt-100 pb-100">
-          <div className="container">
+          <Container>
             <div className="row wow fadeInUp" data-wow-delay=".3s">
               <div className="col-12">
                 <div className="table-content table-responsive">
@@ -192,78 +192,66 @@ const CartMain = () => {
                 </div>
               </div>
             </div> */}
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                alignItems: "center",
-              }}
-            >
-              <div className="cart-page-total" style={{ flex: 1 }}>
-                <h2>{labels.cartTotal}</h2>
-                <ul className="mb-30">
-                  <li>
-                    {labels.subTotal} <span>${parseFloat(total)}</span>
-                  </li>
-                  <li>
-                    {labels.total}
-                    <span>${parseFloat(total)}</span>
-                  </li>
-                </ul>
-              </div>
-              <div
-                className="pt-50"
-                style={{
-                  alignItems: "end",
-                  display: "flex",
+            <div>
+              <Row>
+                <Col xs={12} sm={8}>
+                  <div className="cart-page-total" style={{ flex: 1 }}>
+                    <h2>{labels.cartTotal}</h2>
+                    <ul className="mb-30">
+                      <li>
+                        {labels.subTotal} <span>${parseFloat(total)}</span>
+                      </li>
+                      <li>
+                        {labels.total}
+                        <span>${parseFloat(total)}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </Col>
+                <Col xs={12} sm={4}>
+                  <div
+                    className="pt-50"
+                    style={{
+                      alignItems: "end",
+                      display: "flex",
 
-                  flex: 1,
-                  flexDirection: "column",
-                  justifyContent: "end",
-                }}
-              >
-                <Form.Group md="4" controlId="validationCustom01">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    required
-                    type="email"
-                    placeholder="Email"
-                    onChange={(e) => onEmailChange(e.target.value)}
-                    isInvalid={!validEmail}
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    Please provide a valid email address.
-                  </Form.Control.Feedback>
-                </Form.Group>
-                <CartCheckOut
-                  cartProducts={cartProducts}
-                  disabled={!validEmail}
-                  paymentInfo={{ email }}
-                >
-                  <PrimaryButton
-                    disabled={!validEmail}
-                    style={{ marginTop: 20 }}
+                      flex: 1,
+                      flexDirection: "column",
+                      justifyContent: "end",
+                    }}
                   >
-                    {labels.proceedToCheckout}
-                  </PrimaryButton>
-                </CartCheckOut>
-              </div>
+                    <Form.Group controlId="validationCustom01">
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control
+                        required
+                        type="email"
+                        placeholder="Email"
+                        onChange={(e) => onEmailChange(e.target.value)}
+                        isInvalid={!validEmail}
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        Please provide a valid email address.
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                    <CartCheckOut
+                      cartProducts={cartProducts}
+                      disabled={!validEmail}
+                      paymentInfo={{ email }}
+                    >
+                      <PrimaryButton
+                        disabled={!validEmail}
+                        style={{ marginTop: 20 }}
+                      >
+                        {labels.proceedToCheckout}
+                      </PrimaryButton>
+                    </CartCheckOut>
+                  </div>
+                </Col>
+              </Row>
             </div>
-          </div>
+          </Container>
         </div>
       )}
-
-      {/* <Row>
-        <Col xs={12} sm={8}>
-          Item 1
-        </Col>
-        <Col xs={12} sm={2}>
-          Item 2
-        </Col>
-        <Col xs={12} sm={2}>
-          Item 3
-        </Col>
-      </Row> */}
     </>
   );
 };
