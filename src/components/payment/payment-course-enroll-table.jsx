@@ -9,7 +9,7 @@ const PaymentenrollsTable = ({ enrolls = [] }) => {
       <table className="table">
         <thead>
           <tr>
-            <th className="product-thumbnail">Images</th>
+            {/* <th className="product-thumbnail">Images</th> */}
             <th className="cart-product-name">Product</th>
             {/* <th className="product-price">Unit Price</th> */}
             {/* <th className="product-quantity">Quantity</th> */}
@@ -21,7 +21,7 @@ const PaymentenrollsTable = ({ enrolls = [] }) => {
             const localizedClazz = getLocalize(selectedLanguage, item.clazz);
             return (
               <tr key={index}>
-                <td className="product-thumbnail">
+                {/* <td className="product-thumbnail">
                   <Image
                     src={item?.clazz.imageUrls[0]}
                     style={{
@@ -31,7 +31,7 @@ const PaymentenrollsTable = ({ enrolls = [] }) => {
                     }}
                     alt="img not found"
                   />
-                </td>
+                </td> */}
                 <td className="product-name">
                   <div
                     style={{

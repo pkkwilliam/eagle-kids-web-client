@@ -47,7 +47,6 @@ const ClassDetailsArea = ({ item }) => {
               right: 15,
               margin: "auto",
               top: 130,
-              width: "100%",
               zIndex: 500,
             }}
           >

@@ -2,7 +2,7 @@ import useCartInfo from "@hooks/use-cart-info";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { REQUEST_PAYMENT } from "src/middleware/api";
 import execute from "src/middleware/serviceExecutor";
@@ -252,6 +252,18 @@ const CartMain = () => {
           </div>
         </div>
       )}
+
+      {/* <Row>
+        <Col xs={12} sm={8}>
+          Item 1
+        </Col>
+        <Col xs={12} sm={2}>
+          Item 2
+        </Col>
+        <Col xs={12} sm={2}>
+          Item 3
+        </Col>
+      </Row> */}
     </>
   );
 };
